@@ -41,6 +41,9 @@ body {
   padding: 0;
 }
 
+.booked {
+  background-color: red;
+}
 .month ul li {
   color: white;
   font-size: 20px;
