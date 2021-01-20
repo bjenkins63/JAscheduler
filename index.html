@@ -2,40 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenkins Art Schedule</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jenkins Art Schedule</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-    <style> 
-    .row {
-        border: 1px black;
-        padding: 20px;
-        background-color: white;
-    }
+  <link rel="stylesheet" type="text/css" href="styles.css">
 
-    .col{
-        border: 1px solid black;
-        padding: 10px;
-        background-color: white;
-    }
+  <style>
     
-    </style>
-
+  </style>
 </head>
+<div class="jumbotron">
+  <div class="card">
+    <h3 class="card-header" id="monthAndYear">Weekly Scheduler 2021</h3>
+    <table class="table table-bordered table-responsive-sm" id="calendar">
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tr>
+        <th>8:00 am</th>
+        <th>8:00 am</th>
+        <th>8:00 am</th>
+        <th>8:00 am</th>
+        <th>8:00 am</th>
+        <th>8:00 am</th>
+        <th>8:00 am</th>
+      </tr>
+      </thead>
+      <tr>
+        <th>9:00 am</th>
+        <th>9:00 am</th>
+        <th>9:00 am</th>
+        <th>9:00 am</th>
+        <th>9:00 am</th>
+        <th>9:00 am</th>
+        <th>9:00 am</th>
+      </tr>
+      </thead>
+      <tr>
+        <th>10:00 am</th>
+        <th>10:00 am</th>
+        <th>10:00 am</th>
+        <th>10:00 am</th>
+        <th>10:00 am</th>
+        <th>10:00 am</th>
+        <th>10:00 am</th>
+      </tr>
+      </thead>
+      <tr>
+        <th>11:00 am</th>
+        <th>11:00 am</th>
+        <th>11:00 am</th>
+        <th>11:00 am</th>
+        <th>11:00 am</th>
+        <th>11:00 am</th>
+        <th>11:00 am</th>
+      </tr>
+      </thead>
+      <tr>
+        <th>NOON</th>
+        <th>NOON</th>
+        <th>NOON</th>
+        <th>NOON</th>
+        <th>NOON</th>
+        <th>NOON</th>
+        <th>NOON</th>
+      </tr>
+      </thead>
+      <tr>
+        <th>1:00 pm</th>
+        <th>1:00 pm</th>
+        <th>1:00 pm</th>
+        <th>1:00 pm</th>
+        <th>1:00 pm</th>
+        <th>1:00 pm</th>
+        <th>1:00 pm</th>
+      </tr>
+      </thead>
+      <tr>
+        <th>2:00 pm</th>
+        <th>2:00 pm</th>
+        <th>2:00 pm</th>
+        <th>2:00 pm</th>
+        <th>2:00 pm</th>
+        <th>2:00 pm</th>
+        <th>2:00 pm</th>
+      </tr>
+      </thead>
+      <tr>
+        <th>3:00 pm</th>
+        <th>3:00 pm</th>
+        <th>3:00 pm</th>
+        <th>3:00 pm</th>
+        <th>3:00 pm</th>
+        <th>3:00 pm</th>
+        <th>3:00 pm</th>
+      </tr>
+      </thead>
+      <tr>
+        <th>4:00 pm</th>
+        <th>4:00 pm</th>
+        <th>4:00 pm</th>
+        <th>4:00 pm</th>
+        <th>4:00 pm</th>
+        <th>4:00 pm</th>
+        <th>4:00 pm</th>
+      </tr>
+      </thead>
+
+      <br>
+
+      <!--     <tbody id="calendar-body">
+
+          </tbody>
+      </table>
+
 <div class="container">
     <div class="jumbotron">
         <h1>WEEKLY PLANNER</h1>
@@ -75,8 +177,8 @@
                 <div class="col">save</div>
               </div>
         </div>
-    </div>
-</div>
+    </div> !-->
+  </div>
 </div>
 </body>
 
