@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jenkins Art Schedule</title>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -18,167 +20,166 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  
+   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="styles.css">
-
+  <script src="apps.js"></script>
   <style>
-    
+    h1 {
+      text-align: center;
+      margin: 25px;
+    }
+
+    .jumbotron {
+      width: 90%;
+    }
+
+    .card {
+      vertical-align: middle;
+      align-content: center;
+      width: 90%;
+      padding: 10px;
+    }
+
+    .filled {
+      background-color: aquamarine;
+    }
+
+    .upfilled {
+      background-color: rgb(160, 58, 32);
+      color: white;
+    }
+
+    .btn-group {
+      align-items: center;
+      align-self: center;
+      align-content: center;
+      vertical-align: middle;
+    }
   </style>
+
 </head>
+<body>
 <div class="jumbotron">
   <div class="card">
-    <h3 class="card-header" id="monthAndYear">Weekly Scheduler 2021</h3>
-    <table class="table table-bordered table-responsive-sm" id="calendar">
-      <thead>
-        <tr>
-          <th>Sun</th>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
-        </tr>
-      </thead>
-      <tr>
-        <th>8:00 am</th>
-        <th>8:00 am</th>
-        <th>8:00 am</th>
-        <th>8:00 am</th>
-        <th>8:00 am</th>
-        <th>8:00 am</th>
-        <th>8:00 am</th>
-      </tr>
-      </thead>
-      <tr>
-        <th>9:00 am</th>
-        <th>9:00 am</th>
-        <th>9:00 am</th>
-        <th>9:00 am</th>
-        <th>9:00 am</th>
-        <th>9:00 am</th>
-        <th>9:00 am</th>
-      </tr>
-      </thead>
-      <tr>
-        <th>10:00 am</th>
-        <th>10:00 am</th>
-        <th>10:00 am</th>
-        <th>10:00 am</th>
-        <th>10:00 am</th>
-        <th>10:00 am</th>
-        <th>10:00 am</th>
-      </tr>
-      </thead>
-      <tr>
-        <th>11:00 am</th>
-        <th>11:00 am</th>
-        <th class="booked">11:00 am</th>
-        <th>11:00 am</th>
-        <th>11:00 am</th>
-        <th>11:00 am</th>
-        <th>11:00 am</th>
-      </tr>
-      </thead>
-      <tr>
-        <th>NOON</th>
-        <th>NOON</th>
-        <th>NOON</th>
-        <th>NOON</th>
-        <th>NOON</th>
-        <th>NOON</th>
-        <th>NOON</th>
-      </tr>
-      </thead>
-      <tr>
-        <th>1:00 pm</th>
-        <th>1:00 pm</th>
-        <th>1:00 pm</th>
-        <th>1:00 pm</th>
-        <th>1:00 pm</th>
-        <th>1:00 pm</th>
-        <th>1:00 pm</th>
-      </tr>
-      </thead>
-      <tr>
-        <th>2:00 pm</th>
-        <th>2:00 pm</th>
-        <th>2:00 pm</th>
-        <th>2:00 pm</th>
-        <th>2:00 pm</th>
-        <th>2:00 pm</th>
-        <th>2:00 pm</th>
-      </tr>
-      </thead>
-      <tr>
-        <th>3:00 pm</th>
-        <th>3:00 pm</th>
-        <th>3:00 pm</th>
-        <th>3:00 pm</th>
-        <th>3:00 pm</th>
-        <th>3:00 pm</th>
-        <th>3:00 pm</th>
-      </tr>
-      </thead>
-      <tr>
-        <th>4:00 pm</th>
-        <th>4:00 pm</th>
-        <th>4:00 pm</th>
-        <th>4:00 pm</th>
-        <th>4:00 pm</th>
-        <th>4:00 pm</th>
-        <th>4:00 pm</th>
-      </tr>
-      </thead>
-
-      <br>
-
-      <!--     <tbody id="calendar-body">
-
-          </tbody>
-      </table>
-
-<div class="container">
-    <div class="jumbotron">
-        <h1>WEEKLY PLANNER</h1>
-            <div class="row">
-              <div class="col">MONDAY</div>
-              <div class="col">appts</div>
-              <div class="col">save</div>
-            </div>
-            <div class="row">
-                <div class="col">TUESDAY</div>
-                <div class="col">appts</div>
-                <div class="col">save</div>
-              </div>
-              <div class="row">
-                <div class="col">WEDNESDAY</div>
-                <div class="col">appts</div>
-                <div class="col">save</div>
-              </div>
-              <div class="row">
-                <div class="col">THURSDAY</div>
-                <div class="col">appts</div>
-                <div class="col">save</div>
-              </div>
-              <div class="row">
-                <div class="col">FRIDAY</div>
-                <div class="col">appts</div>
-                <div class="col">save</div>
-              </div>
-              <div class="row">
-                <div class="col">SATURDAY</div>
-                <div class="col">appts</div>
-                <div class="col">save</div>
-              </div>
-              <div class="row">
-                <div class="col">SUNDAY</div>
-                <div class="col">appts</div>
-                <div class="col">save</div>
-              </div>
-        </div>
-    </div> !-->
+    <h3 class="card-header">Weekly Scheduler 2021</h3>
+    <p id="currentDay"class="lead"></p>
   </div>
+    <div class="card">
+    <div>
+      <h1>Monday</h1> 
+      <div class="" role="group" aria-label="Basic checkbox toggle button group">
+        <form class="row g-3">
+          <div class="col-4">
+            <label for="staticEmail2" id="mil8">8:00-9:00 am</label>
+          </div>
+          <div class="col-4">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-4">
+            <button type="button" class="btn btn-primary msb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>
+
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" id="mil9">9:00-10:00 am</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>        
+        
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" id="mil10">10:00-11:00 am</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>
+        
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" id="mil11">11:00-Noon</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>
+        
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" id="mil12">Noon - 1:00 pm</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>
+        
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" id="mil13">1:00 - 2:00 pm</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>         
+        
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" id="mil14">2:00-3:00 pm</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-auto">
+            <button type="button" id="meetingSave" class="btn btn-primary mb-3">Save Meeting</button>
+          </div>
+        </form>
+
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" id="mil15">3:00-4:00 pm</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>   
+
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" id="mil16">4:00-5:00 pm</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2" placeholder="Meeting Title">
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>   
+
+      </div>
+  </div>
+</div>
 </div>
 </body>
 

@@ -1,81 +1,87 @@
-let today = new Date();
-let currentMonth = today.getMonth();
-let currentYear = today.getFullYear();
-let selectYear = document.getElementById("year");
-let selectMonth = document.getElementById("month");
+$(document).ready(function () {
 
-let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    // Get current month, date and day and set the date format
+    const currentMonth = (dayjs().format("MMMM"));
+    const dayOfWeek = (dayjs().format("dddd"));
+    const dayOfMonth = (dayjs().format("D"));
+    const hourOfDay = parseInt((dayjs().format("H")));
+    let indexCounter = 0;
 
-let monthAndYear = document.getElementById("monthAndYear");
-showCalendar(currentMonth, currentYear);
+    //console.log(typeof hourOfDay);
 
+   const militaryTime = [8, 9, 10, 11, 12, 13, 14, 15, 16];
 
-function next() {
-    currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
-    currentMonth = (currentMonth + 1) % 12;
-    showCalendar(currentMonth, currentYear);
-}
+    // Return the current day, month and day
+    $("#currentDay").text(dayOfWeek + ", " + currentMonth + " " + dayOfMonth);
+    //$("#currentDay").css("color", "red");
 
-function previous() {
-    currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
-    currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    showCalendar(currentMonth, currentYear);
-}
+    $(".meetingSave").on("click", function () {
+        //	const paragraph = document.querySelector("MeetingSave");
+        //	paragraph.textContent = "innerText"
 
-function jump() {
-    currentYear = parseInt(selectYear.value);
-    currentMonth = parseInt(selectMonth.value);
-    showCalendar(currentMonth, currentYear);
-}
+        //console.log ("click me");
 
-function showCalendar(month, year) {
+    });
 
-    let firstDay = (new Date(year, month)).getDay();
-    let daysInMonth = 32 - new Date(year, month, 32).getDate();
-
-    let tbl = document.getElementById("calendar-body"); // body of the calendar
-
-    // clearing all previous cells
-    tbl.innerHTML = "";
-
-    // filing data about month and in the page via DOM.
-    monthAndYear.innerHTML = months[month] + " " + year;
-    selectYear.value = year;
-    selectMonth.value = month;
-
-    // creating all cells
-    let date = 1;
-    for (let i = 0; i < 6; i++) {
-        // creates a table row
-        let row = document.createElement("tr");
-
-        //creating individual cells, filing them up with data.
-        for (let j = 0; j < 7; j++) {
-            if (i === 0 && j < firstDay) {
-                let cell = document.createElement("td");
-                let cellText = document.createTextNode("");
-                cell.appendChild(cellText);
-                row.appendChild(cell);
-            }
-            else if (date > daysInMonth) {
-                break;
-            }
-
-            else {
-                let cell = document.createElement("td");
-                let cellText = document.createTextNode(date);
-                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-info");
-                } // color today's date
-                cell.appendChild(cellText);
-                row.appendChild(cell);
-                date++;
-            }
+    $("#mil8").attr("data-hour", militaryTime[0]);
+    $("#mil9").attr("data-hour", militaryTime[1]);
+    $("#mil10").attr("data-hour", militaryTime[2]);
+    $("#mil11").attr("data-hour", militaryTime[3]);
+    $("#mil12").attr("data-hour", militaryTime[4]);
+    $("#mil13").attr("data-hour", militaryTime[5]);
+    $("#mil14").attr("data-hour", militaryTime[6]);
+    $("#mil15").attr("data-hour", militaryTime[7]);
+    $("#mil16").attr("data-hour", militaryTime[8]);
 
 
-        }
 
-        tbl.appendChild(row); // appending each row into calendar body.
-    }
+    //add data attribute to label
+    // Array of hours in day 9-17
+    // Looping through the array of movies
+    //for (var i = 0; i < militaryTime.length; i++) {
 
-}
+        // Then dynamicaly generating buttons for each movie in the array
+        // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+
+
+     //  var a = $(".labelTimeDay").attr("data-hour", militaryTime[indexCounter]);
+
+      // indexCounter++;
+    
+        //// Adding a class of movie-btn to our button        // Adding a data-attribute
+        //a.attr("data-hour", militaryTime[i]);
+
+
+        //console.log(militaryTime[i]);
+
+        // Providing the initial button text
+       // a.text(movies[i]);
+        // Adding the button to the buttons-view div
+       // $("#buttons-view").append(a);
+     // }
+    
+
+
+
+    // MeetingSaveButton.addEventListener("click", function(event){
+    //     event.preventDefault();
+    // })
+
+    // var meeting = {
+    //     meetingSave: MeetingSave.input()
+    // }
+
+    // function addClass() { 
+    //     var v = document.getElementById("e"); 
+    //     v.className += "filled"; 
+    // } 
+
+    // var mtg = document.getElementById("meetingSave").value;
+    //     localStorage.setItem("meeting", mtg);
+
+    // var setMeeting = localStorage.getItem("MeetingSave");
+    //append div add text to time block
+
+
+});
+
