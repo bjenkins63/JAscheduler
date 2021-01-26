@@ -26,7 +26,6 @@ $(document).ready(function () {
 
     
    var MeetingName = document.querySelector("meetingCopy");
-   var saveMeeting = document.querySelector("")
 
 
     // Return the current day, month and day
@@ -37,30 +36,7 @@ $(document).ready(function () {
         event.preventDefault();
         })
 
-    $(".meetingSave").on("click", function () {
-        localStorage.setItem("meetingCopy", "innerText")
-        append innerText with meetingCopy
-
-        appendClass(".filled");
-
-
-    });
-
-
-     var meeting = {
-        meetingSave: MeetingSave.input()
-     }
-
-    function addClass() { 
-        var v = document.getElementById("e"); 
-        v.className += "filled"; 
-        } 
-
-    var mtg = document.getElementById("meetingSave").value;
-        localStorage.setItem("meeting", mtg);
-
-        var setMeeting = localStorage.getItem("MeetingSave");
-        ppend div add text to time block
-
-});
-
+    $(".meetingCopy").on("click", function () {
+        localStorage.setItem("meetingCopy", "innerText")}
+        appendDiv(".filled");
+    
