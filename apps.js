@@ -5,38 +5,33 @@ $(document).ready(function () {
     const dayOfWeek = (dayjs().format("dddd"));
     const dayOfMonth = (dayjs().format("D"));
     const hourOfDay = parseInt((dayjs().format("H")));
-    let indexCounter = 0;
-
-   const militaryTime = [8, 9, 10, 11, 12, 13, 14, 15, 16];
-
-   $("#mil8").attr("data-hour", militaryTime[0]);
-   $("#mil9").attr("data-hour", militaryTime[1]);
-   $("#mil10").attr("data-hour", militaryTime[2]);
-   $("#mil11").attr("data-hour", militaryTime[3]);
-   $("#mil12").attr("data-hour", militaryTime[4]);
-   $("#mil13").attr("data-hour", militaryTime[5]);
-   $("#mil14").attr("data-hour", militaryTime[6]);
-   $("#mil15").attr("data-hour", militaryTime[7]);
-   $("#mil16").attr("data-hour", militaryTime[8]);
-
-
-
-    //have to get the hour of meeting selected and compare to the data-hour att
-    //if it's past tense add attr of hourPast
-
-    
-   var MeetingName = document.querySelector("meetingCopy");
-
 
     // Return the current day, month and day
-    $("#currentDay").text(dayOfWeek + ", " + currentMonth + " " + dayOfMonth);
+
+    $("#currentDay").text(`${dayOfWeek}, ${currentMonth} ${dayOfMonth}`);
 
 
-    MeetingSaveButton.addEventListener("click", function(event){
-        event.preventDefault();
-        })
 
-    $(".meetingCopy").on("click", function () {
-        localStorage.setItem("meetingCopy", "innerText")}
-        appendDiv(".filled");
-    
+    var changeStatus = document.querySelector("#changeStatus");
+    var container = document.querySelector("#container");
+
+    changeStatus.addEventListener("click", function () {
+            container.setAttribute("class", "filled");
+      }
+
+          // const militaryTime = [8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+    // $("#mil8").attr("data-hour", militaryTime[0]);
+    // $("#mil9").attr("data-hour", militaryTime[1]);
+    // $("#mil10").attr("data-hour", militaryTime[2]);
+    // $("#mil11").attr("data-hour", militaryTime[3]);
+    // $("#mil12").attr("data-hour", militaryTime[4]);
+    // $("#mil13").attr("data-hour", militaryTime[5]);
+    // $("#mil14").attr("data-hour", militaryTime[6]);
+    // $("#mil15").attr("data-hour", militaryTime[7]);
+    // $("#mil16").attr("data-hour", militaryTime[8]);
+   
+
+)
+});
+
