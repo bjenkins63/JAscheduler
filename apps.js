@@ -10,16 +10,14 @@ $(document).ready(function () {
 
     $("#currentDay").text(`${dayOfWeek}, ${currentMonth} ${dayOfMonth}`);
 
-
-
-    var changeStatus = document.querySelector("#changeStatus");
+    // var changeStatus = document.querySelectorAll("#changeStatus");
     var container = document.querySelector(".container");
 
-    changeStatus.addEventListener("click", function () {
+    changeStatus.addEventListener("click", () => {
             container.setAttribute("class", "filled");
-      }
+        }
 
-          // const militaryTime = [8, 9, 10, 11, 12, 13, 14, 15, 16];
+    // const militaryTime = [8, 9, 10, 11, 12, 13, 14, 15, 16];
 
     // $("#mil8").attr("data-hour", militaryTime[0]);
     // $("#mil9").attr("data-hour", militaryTime[1]);
