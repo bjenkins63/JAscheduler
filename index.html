@@ -32,7 +32,13 @@
     }
 
     .container {
-      width: 90%;
+      width: 95%;
+      text-align: right;
+    }
+
+    .row {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size:26px;
     }
 
     .p {
@@ -43,6 +49,8 @@
 
     .jumbotron {
       width: 80%;
+      align-self: center;
+      vertical-align: middle;
     }
 
     .card {
@@ -89,9 +97,36 @@
     <div class="container">
       <div class="hourRange">
         <form class="row">
-          <div class="col-sm-2"><label id="mil8">8:00-9:00 am</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy"placeholder="Please add description"></div>
-          <div class="col-3"><button type="button" id="changeStatus" class="btn btn-primary msb-3">Save Meeting</button>
+          <div class="col-sm-2"><label id="mil8">8 - 9 am</label>
+          </div>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy"placeholder="Meeting description">
+          </div>
+          <div class="col-sm-2"><button type="button" id="changeStatus" class="btn btn-primary msb-3">Save Meeting</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+<div class="hourRange">
+        <form class="row">
+          <div class="col-sm-2"><label id="mil9">9 - 10 am</label>
+          </div>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy" placeholder="Meeting description">
+          </div>
+          <div class="col-sm-2"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container"><div class="hourRange">
+      <form class="row">
+          <div class="col-sm-2"><label id="mil10">10 - 11 am</label>
+          </div>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy" placeholder="Meeting description">
+          </div>
+          <div class="col-sm-2"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
           </div>
         </form>
       </div>
@@ -100,9 +135,11 @@
     <div class="container">
       <div class="hourRange">
         <form class="row">
-          <div class="col-sm-2"><label id="mil9">9:00-10:00 am</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy" placeholder="Please add description"></div>
-          <div class="col-sm-3"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          <div class="col-sm-2"><label id="mil11">11 - Noon</label>
+          </div>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy" placeholder="Meeting description">
+          </div>
+          <div class="col-sm-2"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
           </div>
         </form>
       </div>
@@ -111,9 +148,11 @@
     <div class="container">
       <div class="hourRange">
         <form class="row">
-          <div class="col-sm-2"><label id="mil10">10:00-11:00 am</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy" placeholder="Please add description"></div>
-          <div class="col-sm-3"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          <div class="col-sm-2"><label id="mil12">Noon - 1 pm</label>
+          </div>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy" placeholder="Meeting description">
+          </div>
+          <div class="col-sm-2"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
           </div>
         </form>
       </div>
@@ -122,9 +161,10 @@
     <div class="container">
       <div class="hourRange">
         <form class="row">
-          <div class="col-sm-2"><label id="mil11">11:00-Noon</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy" placeholder="Please add description"></div>
-          <div class="col-sm-3"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          <div class="col-sm-2"><label id="mil13">1 - 2:00 pm</label></div>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy" placeholder="Meeting description">
+          </div>
+          <div class="col-sm-2"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
           </div>
         </form>
       </div>
@@ -133,9 +173,11 @@
     <div class="container">
       <div class="hourRange">
         <form class="row">
-          <div class="col-sm-2"><label id="mil12">Noon - 1:00 pm</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy" placeholder="Please add description"></div>
-          <div class="col-sm-3"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          <div class="col-sm-2"><label id="mil14">2:00-3:00 pm</label>
+          </div>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy" placeholder="Meeting description">
+          </div>
+          <div class="col-sm-2"><button type="button" id="meetingSave" class="btn btn-primary mb-3">Save Meeting</button>
           </div>
         </form>
       </div>
@@ -144,9 +186,11 @@
     <div class="container">
       <div class="hourRange">
         <form class="row">
-          <div class="col-sm-2"><label id="mil13">1:00 - 2:00 pm</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy" placeholder="Please add description"></div>
-          <div class="col-sm-3"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          <div class="col-sm-2"><label id="mil15">3:00-4:00 pm</label>
+          </div>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy" placeholder="Meeting description">
+          </div>
+          <div class="col-sm-2"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
           </div>
         </form>
       </div>
@@ -155,31 +199,11 @@
     <div class="container">
       <div class="hourRange">
         <form class="row">
-          <div class="col-sm-2"><label id="mil14">2:00-3:00 pm</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy" placeholder="Please add description"></div>
-          <div class="col-sm-3"><button type="button" id="meetingSave" class="btn btn-primary mb-3">Save Meeting</button>
+          <div class="col-sm-2"><label id="mil16">4:00-5:00 pm</label>
           </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="hourRange">
-        <form class="row">
-          <div class="col-sm-2"><label id="mil15">3:00-4:00 pm</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy" placeholder="Please add description"></div>
-          <div class="col-sm-3"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          <div class="col-sm-8"><input type="text" class="form-control" id="meetingCopy" placeholder="Meeting description">
           </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="hourRange">
-        <form class="row">
-          <div class="col-sm-2"><label id="mil16">4:00-5:00 pm</label></div>
-          <div class="col-sm-7"><input type="text" class="form-control" id="meetingCopy" placeholder="Please add description"></div>
-          <div class="col-sm-3"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
+          <div class="col-sm-2"><button type="button" class="btn btn-primary mb-3 meetingSave">Save Meeting</button>
           </div>
         </form>
       </div>

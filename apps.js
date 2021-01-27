@@ -7,15 +7,26 @@ $(document).ready(function () {
     const hourOfDay = parseInt((dayjs().format("H")));
 
     // Return the current day, month and day
-
     $("#currentDay").text(`${dayOfWeek}, ${currentMonth} ${dayOfMonth}`);
 
     // var changeStatus = document.querySelectorAll("#changeStatus");
     var container = document.querySelector(".container");
 
     changeStatus.addEventListener("click", () => {
-            container.setAttribute("class", "filled");
-        }
+        container.setAttribute("class", "filled");
+    });
+
+    function setMeeting() {
+        let meetingCopy = localStorage.getItem("meetingCopy");
+        setMeeting();
+    }
+
+    let meeting = document.querySelector("meetingCopy").nodeValue;
+    localStorage.setItem("meetingCopy", meeting);
+
+
+
+
 
     // const militaryTime = [8, 9, 10, 11, 12, 13, 14, 15, 16];
 
@@ -30,6 +41,6 @@ $(document).ready(function () {
     // $("#mil16").attr("data-hour", militaryTime[8]);
    
 
-)
+
 });
 
