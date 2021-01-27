@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 
     var changeStatus = document.querySelector("#changeStatus");
-    var container = document.querySelector("#container");
+    var container = document.querySelector(".container");
 
     changeStatus.addEventListener("click", function () {
             container.setAttribute("class", "filled");
