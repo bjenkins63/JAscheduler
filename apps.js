@@ -11,24 +11,30 @@ $(document).ready(function () {
     $("#currentDay").text(`${dayOfWeek}, ${currentMonth} ${dayOfMonth}, ${hourOfDay}:${minuteOfDay}`);
 
 
-    if (new Date().getHours() < 18) {
+    if (hourOfDay < 18) {
         document.getElementById("mil9").innerHTML = "Good day!";
       };
 
-    if (new Date().getHours() < 15) {
-        document.getElementById("container").attribute = "#future";
-    };
 
-//     changeStatus.addEventListener("click", function () {
-//             container.setAttribute("class", ".filled");
-//         });
 
-//     function checkHour() {
-//         var d = new Date();
-//         var n = d.getHours();
-//         document.getElementById("demo").innerHTML = n;
-//     }
-    
+      var mil9 = 9;
+      
+
+
+      const militaryTime = [ 9, 10, 11, 12, 13, 14, 15, 16];
+
+      $("#mil9").attr("data-hour", militaryTime[0]);
+      $("#mil10").attr("data-hour", militaryTime[1]);
+      $("#mil11").attr("data-hour", militaryTime[2]);
+      $("#mil12").attr("data-hour", militaryTime[3]);
+      $("#mil13").attr("data-hour", militaryTime[4]);
+      $("#mil14").attr("data-hour", militaryTime[5]);
+      $("#mil15").attr("data-hour", militaryTime[6]);
+      $("#mil16").attr("data-hour", militaryTime[7]);
+
+
+
+
 //     $(document).ready(function() {
 //         $('#st').change(function(){
 //             var st = $('#st9:00').val(); // start time Format: '9:00 PM'
@@ -66,17 +72,7 @@ $(document).ready(function () {
 
 
 
-    // const militaryTime = [8, 9, 10, 11, 12, 13, 14, 15, 16];
 
-    // $("#mil8").attr("data-hour", militaryTime[0]);
-    // $("#mil9").attr("data-hour", militaryTime[1]);
-    // $("#mil10").attr("data-hour", militaryTime[2]);
-    // $("#mil11").attr("data-hour", militaryTime[3]);
-    // $("#mil12").attr("data-hour", militaryTime[4]);
-    // $("#mil13").attr("data-hour", militaryTime[5]);
-    // $("#mil14").attr("data-hour", militaryTime[6]);
-    // $("#mil15").attr("data-hour", militaryTime[7]);
-    // $("#mil16").attr("data-hour", militaryTime[8]);
    
 
 
