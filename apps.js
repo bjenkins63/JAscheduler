@@ -5,19 +5,18 @@ $(document).ready(function () {
     const dayOfWeek = (dayjs().format("dddd"));
     const dayOfMonth = (dayjs().format("D"));
     const hourOfDay = parseInt((dayjs().format("H")));
+    const minuteOfDay = parseInt((dayjs().format("mm")));
 
     // Return the current day, month and day
-    $("#currentDay").text(`${dayOfWeek}, ${currentMonth} ${dayOfMonth}`);
+    $("#currentDay").text(`${dayOfWeek}, ${currentMonth} ${dayOfMonth}, ${hourOfDay}:${minuteOfDay}`);
 
-    // var changeStatus = document.querySelectorAll("#changeStatus");
-    var container = document.querySelector(".container");
 
     if (new Date().getHours() < 18) {
         document.getElementById("mil9").innerHTML = "Good day!";
       };
 
     if (new Date().getHours() < 15) {
-        document.getElementById("mil9").attribute = "future";
+        document.getElementById("container").attribute = "#future";
     };
 
 //     changeStatus.addEventListener("click", function () {
@@ -42,7 +41,8 @@ $(document).ready(function () {
 //                 }
 //         });
 //     });
-
+    // var changeStatus = document.querySelectorAll("#changeStatus");
+    // var container = document.querySelector("#container");
 
 //     //start time
 // var start_time = $("#start_time").val();
