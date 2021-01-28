@@ -12,17 +12,55 @@ $(document).ready(function () {
     // var changeStatus = document.querySelectorAll("#changeStatus");
     var container = document.querySelector(".container");
 
-    changeStatus.addEventListener("click", () => {
-        container.setAttribute("class", "filled");
-    });
+    if (new Date().getHours() < 18) {
+        document.getElementById("mil9").innerHTML = "Good day!";
+      };
 
-    function setMeeting() {
-        let meetingCopy = localStorage.getItem("meetingCopy");
-        setMeeting();
-    }
+    if (new Date().getHours() < 15) {
+        document.getElementById("mil9").attribute = "future";
+    };
 
-    let meeting = document.querySelector("meetingCopy").nodeValue;
-    localStorage.setItem("meetingCopy", meeting);
+//     changeStatus.addEventListener("click", function () {
+//             container.setAttribute("class", ".filled");
+//         });
+
+//     function checkHour() {
+//         var d = new Date();
+//         var n = d.getHours();
+//         document.getElementById("demo").innerHTML = n;
+//     }
+    
+//     $(document).ready(function() {
+//         $('#st').change(function(){
+//             var st = $('#st9:00').val(); // start time Format: '9:00 PM'
+//             var et = $('#et10:00').val(); // end time   Format: '11:00 AM' 
+    
+//             //how do i compare time
+//                 if(st > et)
+//                 {
+//                    alert('end time always greater then start time');
+//                 }
+//         });
+//     });
+
+
+//     //start time
+// var start_time = $("#start_time").val();
+
+// //end time
+// var end_time = $("#end_time").val();
+
+
+
+
+//     function setMeeting() {
+//         let meetingCopy = localStorage.getItem("meetingCopy");
+//         setMeeting();
+//     }
+
+//     let meeting = document.querySelector("meetingCopy").nodeValue;
+//     localStorage.setItem("meetingCopy", meeting);
+
 
 
 
