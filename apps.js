@@ -11,28 +11,28 @@ $(document).ready(function () {
     $("#currentDay").text(`${dayOfWeek}, ${currentMonth} ${dayOfMonth}, ${hourOfDay}:${minuteOfDay}`);
 
 
-    if (hourOfDay < 18) {
-        document.getElementById("mil9").innerHTML = "Good day!";
+    if (hourOfDay > 10) {
+        $("#mil9").addClass("past");
       };
 
 
 
-      var mil9 = 9;
+    //   var mil9 = 9;
       
 
 
-      const militaryTime = [ 9, 10, 11, 12, 13, 14, 15, 16];
+    //   const militaryTime = [ 9, 10, 11, 12, 13, 14, 15, 16];
 
-      $("#mil9").attr("data-hour", militaryTime[0]);
-      $("#mil10").attr("data-hour", militaryTime[1]);
-      $("#mil11").attr("data-hour", militaryTime[2]);
-      $("#mil12").attr("data-hour", militaryTime[3]);
-      $("#mil13").attr("data-hour", militaryTime[4]);
-      $("#mil14").attr("data-hour", militaryTime[5]);
-      $("#mil15").attr("data-hour", militaryTime[6]);
-      $("#mil16").attr("data-hour", militaryTime[7]);
+    //   $("#mil9").attr("data-hour", militaryTime[0]);
+    //   $("#mil10").attr("data-hour", militaryTime[1]);
+    //   $("#mil11").attr("data-hour", militaryTime[2]);
+    //   $("#mil12").attr("data-hour", militaryTime[3]);
+    //   $("#mil13").attr("data-hour", militaryTime[4]);
+    //   $("#mil14").attr("data-hour", militaryTime[5]);
+    //   $("#mil15").attr("data-hour", militaryTime[6]);
+    //   $("#mil16").attr("data-hour", militaryTime[7]);
 
-
+    //   document.getElementById("mil9").innerHTML = "Good day!";
 
 
 //     $(document).ready(function() {
