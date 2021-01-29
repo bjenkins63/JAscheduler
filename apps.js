@@ -27,98 +27,71 @@ $(document).ready(function () {
         return adjHour;
     }
 
+    function hourDivs() {
+        // collect elements loop over
+        let ranges = $(".hourRange")
+        ranges.each(function () {
+            var hourPage = $(this)
+            let divStatus = hourPage.attr("data-hour")
+            if (divStatus < hourOfDay) {
+                hourPage.addClass("past")
+            } else if (divSatus > hourPage) {
+                hourPage.addClass(future)
+            } else {
+
+            }
+        })
+
+
+
+    }
+    hourDivs();
+
+
+
     // GIVE DIVS THEIR CORRECT TIME VALUE ON LOAD
 
     //compare the div numeric value to the current time (hourOfDay)
     //if value is = do nothing; if > add .future class; if < add .past class  
 
-    if (adjHour > hourOfDay); {
-        $.addClass("past");
-    };
+    // if (adjHour > hourOfDay); {
+    //     $.addClass("past");
+    // };
 
-    if (adjHour < hourOfDay); {
-        $.addClass("future");
-    };
+    // if (adjHour < hourOfDay); {
+    //     $.addClass("future");
+    // };
 
-    if (adjHour === hourOfDay); {
-        return;
-    }
-}
-
+    // if (adjHour === hourOfDay); {
+    //     return;
+    // }
 
 
-//want the btn in the hour div to change class of div to (.reserved)when clicked, 
-//and deactivate the text field and button
-//Save Meeting Details (meetingCopy.put.innerText)
-//Get meetingCopy from localstorage and center in the ().reserved) hour div
+
+
+    //want the btn in the hour div to change class of div to (.reserved)when clicked, 
+    //and deactivate the text field and button
+    //Save Meeting Details (meetingCopy.put.innerText)
+    //Get meetingCopy from localstorage and center in the ().reserved) hour div
+
+
+    // $.meetingCopy.setItemlocalStorage("meetingCopy")
+
+    // $.getItemlocalStorage(meetingCopy).getInnerHTML()
+    // setText meetingCopy
+
+
+
+
+
+
+
+
+
 
     $("btn").click(function () {
-    $("#").addClass("reserved");
-});
-
-
-
-function setMeeting() {
-    let meetingCopy = localStorage.getItem("meetingCopy");
-    setMeeting();
-}
-
-let meeting = document.querySelector("meetingCopy").nodeValue;
-localStorage.setItem("meetingCopy", meeting);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const newLocal = newFunction();
-
-    //var MilitaryTime = [9, 10, 11, 12, 13, 14, 15, 16];
-
-
-
-
-//     $(document).ready(function() {
-//         $('#st').change(function(){
-//             var st = $('#st9:00').val(); // start time Format: '9:00 PM'
-//             var et = $('#et10:00').val(); // end time   Format: '11:00 AM' 
-
-//             //how do i compare time
-//                 if(st > et)
-//                 {
-//                    alert('end time always greater then start time');
-//                 }
-//         });
-//     });
-    // var changeStatus = document.querySelectorAll("#changeStatus");
-    // var container = document.querySelector("#container");
-
-//     //start time
-// var start_time = $("#start_time").val();
-
-// //end time
-// var end_time = $("#end_time").val();
-
-
-
-
-
-
-
-
-
-
-   
+        $("#").addClass("reserved");
+    })
 
 
 });
