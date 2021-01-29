@@ -35,8 +35,8 @@ $(document).ready(function () {
             let divStatus = hourPage.attr("data-hour")
             if (divStatus < hourOfDay) {
                 hourPage.addClass("past")
-            } else if (divSatus > hourPage) {
-                hourPage.addClass(future)
+            } else if (divStatus > hourOfDay) {
+                hourPage.addClass("future")
             } else {
 
             }
