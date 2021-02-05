@@ -1,4 +1,7 @@
 # JAscheduler
 
-This product is not ready. I am still working out the kinks with capturing the meeing description and appending that div.
+A daily planner that sets the status hourly by color coding the hourly blocks.
 
+#Record a meeting
+
+insert meeting description to record the days meetings, displayed in the header.
